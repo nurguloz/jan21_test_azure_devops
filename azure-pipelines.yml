@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: docker build -t sample
+- script: docker build -t sample .
   displayName: 'build container'
 
 # - script: |
