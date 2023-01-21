@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: node
+- script: node -v
   displayName: 'check nodejs'
 
 # - script: |
