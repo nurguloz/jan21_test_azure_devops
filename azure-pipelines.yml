@@ -10,8 +10,11 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: node -v
-  displayName: 'check nodejs'
+- script: npm i
+  displayName: 'install nodejs dep'
+  
+- script: npm run build
+  displayName: 'application build'
 
 # - script: |
 #     echo Add other tasks to build, test, and deploy your project.
