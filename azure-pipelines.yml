@@ -9,10 +9,17 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: docker build -t sample .
-  displayName: 'build container'
+# steps:
+# - script: docker build -t sample .
+#   displayName: 'build container'
 
+- task: Docker@2
+  inputs:
+    containerRegistry: 'test_acr'
+    repository: 'sample'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
+    
 # - script: |
 #     echo Add other tasks to build, test, and deploy your project.
 #     echo See https://aka.ms/yaml
