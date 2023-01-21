@@ -15,11 +15,11 @@ steps:
 
 - task: Docker@2
   inputs:
-    containerRegistry: 'test_acr'
-    repository: 'sample'
+    containerRegistry: 'acr'
+    repository: 'jan21'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    
+
 # - script: |
 #     echo Add other tasks to build, test, and deploy your project.
 #     echo See https://aka.ms/yaml
